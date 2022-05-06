@@ -9,11 +9,8 @@ def findGW(word):
         if w in wordSet:
             if curWord == w :
                 continue
-            # elif w in wordSet:#새로운 문자인데 등록된 경우
             else:
                 return False
-        #         wordSet.add(w)
-        #         curWord = w
         else :
             wordSet.add(w)
             curWord = w
