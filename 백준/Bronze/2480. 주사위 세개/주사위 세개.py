@@ -1,16 +1,15 @@
-one, two, three = input().split()
-diceNum = [one, two, three]
-x = set(diceNum)
-y = list(x)
+import sys
+input = sys.stdin.readline
 
-if len(y) == 1:
-    print(10000 + (int(one) * 1000))
-elif len(y) == 2:
-    cnt0 = diceNum.count(y[0])
-    cnt1 = diceNum.count(y[1])
-    if cnt0 > cnt1:
-        print(1000 + (int(y[0]) * 100))
-    else:
-        print(1000 + (int(y[1]) * 100))
-else:
-    print(max(int(one), int(two), int(three)) * 100)
+diceNums = list(map(int, input().rstrip().split()))
+cmp = list(set(diceNums))
+
+if len(cmp) == 1:
+    print(10000 + (cmp[0] * 1000))
+elif len(cmp) == 2:
+    for n in cmp:
+        if diceNums.count(n) == 2:
+            print(1000 + (n * 100))
+            break
+elif len(cmp) == 3:
+    print(max(cmp) * 100)
