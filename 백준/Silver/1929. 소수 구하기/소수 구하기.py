@@ -1,4 +1,3 @@
-from math import sqrt
 import sys
 input = sys.stdin.readline
 
@@ -6,7 +5,7 @@ def isPrimeNum(naturalNum):
     if naturalNum == 1:
         return False
     else:
-        for num in range(2, (int(sqrt(naturalNum)) + 1)):
+        for num in range(2, (int(naturalNum ** 0.5) + 1)):
             if naturalNum % num == 0:
                 return False
 
