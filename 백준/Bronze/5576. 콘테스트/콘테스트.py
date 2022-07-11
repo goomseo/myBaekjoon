@@ -1,0 +1,1 @@
+[print(sum(sorted([int(input()) for _ in range(10)])[-3:]), end = ' ') for _ in range(2)]
