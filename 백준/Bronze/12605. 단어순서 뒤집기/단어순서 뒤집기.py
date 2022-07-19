@@ -6,6 +6,5 @@ N = int(input())
 idx = 0
 for _ in range(N):
     idx += 1
-    words = input().rstrip().split()
-    words.reverse()
+    words = reversed(input().rstrip().split())
     print(f'Case #{idx}:', ' '.join(words))
