@@ -12,7 +12,7 @@ def scaleRank(w_h_list):
 
         idx += 1
 
-    return [print(ranking, end = ' ') for ranking in rankings]
+    [print(ranking, end = ' ') for ranking in rankings]
 
 def main():
     N = int(input())
