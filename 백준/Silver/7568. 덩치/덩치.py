@@ -12,14 +12,11 @@ def scaleRank(w_h_list):
 
         idx += 1
 
-    for idx in range(len(rankings)):
-        rankings[idx] = str(rankings[idx])
-        
-    return ' '.join(rankings)
+    return [print(ranking, end = ' ') for ranking in rankings]
 
 def main():
     N = int(input())
     w_h_list = [list(map(int, input().rstrip().split())) for _ in range(N)]
-    print(scaleRank(w_h_list))
+    scaleRank(w_h_list)
 
 main()
