@@ -1,8 +1,6 @@
 import sys
 input = sys.stdin.readline
 
-bins = input().rstrip().split()
-bins[0] = int(bins[0], 2)
-bins[1] = int(bins[1], 2)
+x, y = input().rstrip().split()
 
-print(bin(sum(bins))[2:])
+print(bin(int(x, 2) + int(y, 2))[2:])
