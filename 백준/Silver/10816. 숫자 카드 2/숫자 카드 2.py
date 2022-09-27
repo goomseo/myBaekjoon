@@ -12,6 +12,7 @@ for target in targets:
         count_targets[target] += 1
 
 input()
-queries = map(int, input().rstrip().split())
+requests = map(int, input().rstrip().split())
 
-print(' '.join(str(count_targets[query]) if query in count_targets else '0' for query in queries))
+print(' '.join(str(count_targets[request]) if request in count_targets else '0' for request in requests))
+
