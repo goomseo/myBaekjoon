@@ -6,7 +6,10 @@ targets = map(int, input().rstrip().split())
 
 count_targets = {}
 for target in targets:
-    count_targets[target] = count_targets.get(target, 0) + 1
+    if not(target in count_targets):
+        count_targets[target] = 1
+    else:
+        count_targets[target] += 1
 
 input()
 queries = map(int, input().rstrip().split())
