@@ -1,0 +1,1 @@
+[print(f'Case {idx}: {sum(map(int, input().rstrip().split()))}') for idx in range(1, int(input()) + 1)]
