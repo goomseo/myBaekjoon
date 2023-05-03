@@ -1,14 +1,14 @@
-# [Bronze III] N 찍기 - 2741 
+# [Bronze V] N 찍기 - 2741 
 
 [문제 링크](https://www.acmicpc.net/problem/2741) 
 
 ### 성능 요약
 
-메모리: 30864 KB, 시간: 112 ms
+메모리: 2020 KB, 시간: 8 ms
 
 ### 분류
 
-구현(implementation)
+구현
 
 ### 문제 설명
 
