@@ -1,7 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include <vector>
-#include <numeric>
 
 using namespace std;
 
@@ -25,15 +23,19 @@ int main()
     cin >> m;
     cin >> n;
 
-    vector<int> vec;
+    int sum = 0, min = n, count = 0;
     for (int i = m; i < n + 1; ++i) {
-        if (isPrime(i))
-            vec.push_back(i);
+        if (isPrime(i)) {
+            sum += i;
+            if (i < min)
+                min = i;
+            count += 1;
+        }
     }
 
-    if (vec.size()) {
-        cout << accumulate(vec.begin(), vec.end(), 0) << '\n';
-        cout << vec[0];
+    if (count) {
+        cout << sum << '\n';
+        cout << min;
     }
     else
         cout << -1;
