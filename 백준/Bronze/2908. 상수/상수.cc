@@ -1,20 +1,13 @@
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
 int getReversed(int n) {
-    int result = 0;
+    string result = to_string(n);
+    reverse(result.begin(), result.end());
 
-    while (true) {
-        if (n == 0)
-            break;
-
-        result += n % 10;
-        result *= 10;
-        n /= 10;
-    }
-
-    return result / 10;
+    return stoi(result);
 }
 
 int main() {
