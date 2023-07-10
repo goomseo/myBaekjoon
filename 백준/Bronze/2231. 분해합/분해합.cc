@@ -1,19 +1,13 @@
 #include <iostream>
-#include <algorithm>
 
 using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr); cout.tie(nullptr);
-
     int n;
     cin >> n;
 
-    int digitGenerator, tmp, count = 0;
+    int digitGenerator, tmp;
     for (int i = 1; i < n + 1; ++i) {
-        count += 1;
-
         tmp = i;
         digitGenerator = tmp;
         while (true) {
@@ -26,10 +20,9 @@ int main() {
 
         if (digitGenerator == n) {
             cout << i;
-            break;
+            return 0;
         }
     }
 
-    if (count == n)
-        cout << 0;
+    cout << 0;
 }
