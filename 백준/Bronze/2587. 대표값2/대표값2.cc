@@ -10,13 +10,11 @@ int main() {
     cin.tie(nullptr); cout.tie(nullptr);
 
     vector<int> vec;
-    int a, b, c, d, e;
-    cin >> a >> b >> c >> d >> e;
-    vec.push_back(a);
-    vec.push_back(b);
-    vec.push_back(c);
-    vec.push_back(d);
-    vec.push_back(e);
+    int n;
+    for (int i = 0; i < 5; ++i) {
+        cin >> n;
+        vec.push_back(n);
+    }
 
     sort(vec.begin(), vec.end());
     cout << accumulate(vec.begin(), vec.end(), 0) / vec.size() << '\n' << vec[2];
