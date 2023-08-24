@@ -1,36 +1,38 @@
 #include <iostream>
-
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
 
 using namespace std;
+typedef unsigned long long ull;
 
-int pro1[101][101];
-int pro2[101][101];
-int res[101][101];
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr); cout.tie(nullptr);
 
-int main()
-{
-	int N, M, K;
-	cin >> N >> M;
-	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < M; j++) {
-			cin>>pro1[i][j];
-		}
-	}
-	cin >> M >> K;
-	for (int i = 0; i < M; i++) {
-		for (int j = 0; j < K; j++) {
-			cin >> pro2[i][j];
-		}
-	}
+    int n, m, k;
 
-	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < K; j++) {
-			for (int k = 0; k < M; k++) {
-				res[i][j] += pro1[i][k] * pro2[k][j];
-			}
-			cout << res[i][j] << " ";
-		}
-		cout << endl;
-	}
-	
+    cin >> n >> m;
+    int matrix1[100][100] = {0};
+    for (int i = 0; i < n; ++i)
+        for (int j = 0; j < m; ++j)
+            cin >> matrix1[i][j];
+
+    cin >> m >> k;
+    int matrix2[100][100] = {0};
+    for (int i = 0; i < m; ++i)
+        for (int j = 0; j < k; ++j)
+            cin >> matrix2[i][j];
+
+    int answer_matrix[100][100] = {0};
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < k; ++j) {
+            for (int l = 0; l < m; ++l)
+                answer_matrix[i][j] += matrix1[i][l] * matrix2[l][j];
+            cout << answer_matrix[i][j] << " ";
+        }
+        cout << '\n';
+    }
 }
